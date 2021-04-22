@@ -100,7 +100,7 @@
     }
     &-label {
         text-transform: uppercase;
-        
+
         &:after {
             content: ": ";
         }
@@ -113,9 +113,12 @@
         margin: 0;
         &-item {
             margin-bottom: 14px;
-            
+
             &.active {
                 .filter-options-title {
+                  .filter-options-title:after {
+                    left:0px !important;
+                  }
                     border-radius: 7px 7px 0 0;
                 }
                 .filter-options-content {
@@ -177,7 +180,7 @@
             border-top: 0;
             border-radius: 0 0 7px 7px;
             background-color: #fbfbfb;
-            
+
             .item {
                 margin: 3px 0;
                 line-height: 1.5em;

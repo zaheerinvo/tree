@@ -412,63 +412,22 @@
             </div>
         </div>
     </div>
-    <style>.content{display: none;}</style>
     <div class="header content">
         <div class="header-main-left cozmot-one">
-          <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
-$ur = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB); ?>
-          <div class="collapsible" style="height:25px;display:inline-block;vertical-align:bottom;"><img src="<?= $ur; ?>media/wysiwyg/smartwave/porto/header_types/cozmot-world-sign.png" alt="Cozmot World Logo"></div>
-          <div class="content">
-            <span class="cozmot-alpha"><?php echo $this->getChildHtml("currency"); ?></span>
+            <?php echo $this->getChildHtml("currency"); ?>
             <?php echo $this->getChildHtml("store_language"); ?>
-              <span class="cozmot-beta"><i class="fa fa-money"></i>SAR</span>
-              <span class="cozmot-gemma">Saudi Arabia</span>
-              <!-- <div class="cozmot-deca">Close</div> -->
-            </div>
-
-            <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var coll2 = document.getElementsByClassName("cozmot-deca");
-            var i;
-            var i2;
-
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "inline-block") {
-                  content.style.display = "none";
-                } else {
-                  content.style.display = "inline-block";
-                }
-              });
-            }
-            // for (i2 = 0; i2 < coll2.length; i2++) {
-            //   coll2[i2].addEventListener("click", function() {
-            //     //this.classList.toggle("active");
-            //     var content = this.nextElementSibling;
-            //     //if (content.style.display === "inline-block") {
-            //       content.style.display = "none";
-            //     //} else {
-            //       //content.style.display = "inline-block";
-            //     //}
-            //   });
-            // }
-            </script>
         </div>
         <?php echo $this->getChildHtml("logo"); ?>
         <div class="header-main-right cozmot-one">
             <span data-action="toggle-nav" class="action nav-toggle"><span><?php echo __('Toggle Nav') ?></span></span>
             <?php echo $this->getChildHtml("custom_block"); ?>
-            <!-- <a href="<?php //echo $_helper->getBaseLinkUrl(). 'wishlist' ?>" class="action my-wishlist" title="My Wish List" role="button"><i class="porto-icon-heart-empty"></i></a> -->
-            <a href="<?php echo $_helper->getBaseLinkUrl(). 'giftregistry' ?>" class="action my-wishlist" title="Gift Registry" role="button"><i class="porto-icon-gift"></i></a>
+            <a href="<?php echo $_helper->getBaseLinkUrl(). 'wishlist' ?>" class="action my-wishlist" title="My Wish List" role="button"><i class="porto-icon-heart-empty"></i></a>
             <div class="search-area">
                 <a href="javascript:void(0)" class="search-toggle-icon"><i class="porto-icon-search"></i><span><?php echo __('Search'); ?></a>
                 <?php echo $this->getChildHtml("top.search"); ?>
             </div>
             <?php echo $this->getChildHtml("minicart"); ?>
-             <div class="dangling-lang-responsive"><?php echo $this->getChildHtml("store_language"); ?></div>
+            <?php echo $this->getChildHtml("store_language"); ?>
         </div>
     </div>
     <?php echo $this->getChildHtml("navigation.sections"); ?>

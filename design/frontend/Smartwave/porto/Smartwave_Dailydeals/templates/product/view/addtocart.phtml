@@ -21,7 +21,7 @@
     <div class="sw-dailydeal-wrapper">
       <div class="sw-dailydeal">
         <?php if($block->getRequest()->getParam('dailydealproduct')) :?>
-            <p id="expired"></p> 
+            <p id="expired"></p>
         <?php endif; ?>
         <div class="countdowncontainer" style="display:none;">
             <span class="dailydeal-label">
@@ -172,7 +172,7 @@
       }
     }
 
-    //Set date as magentodatetime 
+    //Set date as magentodatetime
     var date = new Date('<?php echo $dailydealhelper->getcurrentDate() ?>');
 
     var day   = date.getDate();
@@ -185,7 +185,7 @@
     var fulldate = year+'-'+(month+1)+'-'+day+' '+hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2);
 
     // Set Interval
-    timer = setInterval(function() 
+    timer = setInterval(function()
     {
         date.setSeconds(date.getSeconds() + 1);
         var month=date.getMonth();

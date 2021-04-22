@@ -105,7 +105,6 @@
 
 button.mfp-close,
 button.mfp-arrow {
-    display: none !important;
   overflow: visible;
   cursor: pointer;
   background: transparent;

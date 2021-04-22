@@ -150,6 +150,8 @@
 .porto-icon-bag-1:before { content: '\f881'; } /* '' */
 .porto-icon-plus:before { content: '\f882'; } /* '' */
 .porto-icon-minus:before { content: '\f883'; } /* '' */
+.filter-options-title:after { left: 0 !important; }
+
 .filter-options-title {padding-right: 40px !important;}
 .tocart:before {display: none !important;}
 
